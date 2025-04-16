@@ -10,7 +10,7 @@ class LeaderboardScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Leaderboard')),
       body: FutureBuilder(
         future: DatabaseService.getTopScores(),
-        builder: (context, snapshot) {
+        builder: (context, snapshot) { //
           if (snapshot.hasData) {
             final scores = snapshot.data as List<Map<String, dynamic>>;
             return ListView(
